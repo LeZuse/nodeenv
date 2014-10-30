@@ -368,8 +368,6 @@ def callit(cmd, show_stdout=True, in_shell=False,
     cmd_parts = []
 
     for part in cmd:
-        if len(part) > 45:
-            part = part[:20] + "..." + part[-20:]
         if ' ' in part or '\n' in part or '"' in part or "'" in part:
             part = '"%s"' % part.replace('"', '\\"')
         cmd_parts.append(part)
